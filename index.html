@@ -217,6 +217,99 @@ body {
     line-height: 1.5;
 }
 
+/* ===== AUTO-REDIRECT ===== */
+.redirect-box {
+    background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+    border: 2px dashed #48bb78;
+    border-radius: 16px;
+    padding: 35px;
+    text-align: center;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.redirect-box::before {
+    content: '✨';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 5rem;
+    opacity: 0.1;
+    transform: rotate(30deg);
+}
+
+.redirect-title {
+    font-size: 1.4rem;
+    color: #276749;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+    padding: 18px 45px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(72, 187, 120, 0.3);
+    border: none;
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(72, 187, 120, 0.4);
+}
+
+.cta-button::after {
+    content: '→';
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover::after {
+    transform: translateX(5px);
+}
+
+.timer {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 14px 24px;
+    border-radius: 50px;
+    margin-top: 25px;
+    font-size: 1rem;
+    color: #4a5568;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timer-icon {
+    font-size: 1.2rem;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#countdown {
+    font-weight: 700;
+    color: #2d3748;
+    font-size: 1.2rem;
+    min-width: 30px;
+    text-align: center;
+}
+
 /* ===== FOOTER ===== */
 .footer {
     background: #2d3748;
@@ -240,36 +333,38 @@ body {
     margin-top: 15px;
 }
 
-/* ===== BANNER RESPONSIVE ===== */
-.banner-container {
+/* ===== BANNER RESPONSIVE FOOTER ===== */
+.footer-banner-container {
     width: 100%;
     max-width: 728px;
     margin: 20px auto;
     text-align: center;
     overflow: hidden;
+    background: #1a202c;
     border-radius: 8px;
+    padding: 10px;
 }
 
-.banner-wrapper {
+.footer-banner-wrapper {
     position: relative;
     width: 100%;
     height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f5f5f5;
 }
 
-.banner-wrapper > div,
-.banner-wrapper ins,
-.banner-wrapper iframe {
+.footer-banner-wrapper > div,
+.footer-banner-wrapper ins,
+.footer-banner-wrapper iframe,
+#container-666ab4fedb8ca0356424e9fb7d465e43,
+.footer-banner-wrapper * {
     width: 100% !important;
     max-width: 728px !important;
     height: 90px !important;
     margin: 0 auto !important;
     display: block !important;
     overflow: hidden !important;
-    border: none;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -300,23 +395,35 @@ body {
         padding: 25px;
     }
     
+    .redirect-box {
+        padding: 25px;
+    }
+    
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+    
     .footer {
         padding: 25px;
     }
     
     /* Mobile banner */
-    .banner-container {
+    .footer-banner-container {
         margin: 15px auto;
+        padding: 8px;
         max-width: 95%;
     }
     
-    .banner-wrapper {
+    .footer-banner-wrapper {
         height: 75px !important;
     }
     
-    .banner-wrapper > div,
-    .banner-wrapper ins,
-    .banner-wrapper iframe {
+    .footer-banner-wrapper > div,
+    .footer-banner-wrapper ins,
+    .footer-banner-wrapper iframe,
+    #container-666ab4fedb8ca0356424e9fb7d465e43,
+    .footer-banner-wrapper * {
         max-width: 468px !important;
         height: 75px !important;
     }
@@ -339,41 +446,45 @@ body {
         font-size: 1.5rem;
     }
     
-    .banner-wrapper {
+    .footer-banner-wrapper {
         height: 50px !important;
     }
     
-    .banner-wrapper > div,
-    .banner-wrapper ins,
-    .banner-wrapper iframe {
+    .footer-banner-wrapper > div,
+    .footer-banner-wrapper ins,
+    .footer-banner-wrapper iframe,
+    #container-666ab4fedb8ca0356424e9fb7d465e43,
+    .footer-banner-wrapper * {
         max-width: 320px !important;
         height: 50px !important;
     }
 }
     </style>
+
+
 </head>
 <body>
+
+<div id="container-666ab4fedb8ca0356424e9fb7d465e43"></div>
+
     <div class="container">
         <!-- Header -->
         <header class="header">
+			<script type="text/javascript">
+  atOptions = {
+  	'key' : 'e48a76fea22d12815ef78cf1759d54aa',
+  	'format' : 'iframe',
+  	'height' : 90,
+  	'width' : 728,
+  	'params' : {}
+  };
+</script>
+<script
+  type="text/javascript"
+  src="//www.highperformanceformat.com/e48a76fea22d12815ef78cf1759d54aa/invoke.js"
+></script> 
             <h1 class="logo">affitimilano.it</h1>
             <p class="subtitle">Hai digitato un indirizzo simile a siti di affitti?</p>
-            
-            <!-- Banner Smartlink Adsterra -->
-            <div class="banner-container">
-                <div class="banner-wrapper">
-                    <script type="text/javascript">
-                        atOptions = {
-                            'key' : '39b233784657ff269ecf8bc31aeedebe',
-                            'format' : 'iframe',
-                            'height' : 90,
-                            'width' : 728,
-                            'params' : {}
-                        };
-                    </script>
-                    <script type="text/javascript" src="//www.effectivegatecpm.com/tnedb6ypcs/invoke.js"></script>
-                </div>
-            </div>
         </header>
         
         <!-- Main Content -->
@@ -429,42 +540,33 @@ body {
                     <p class="link-desc">Mappa interattiva e filtri avanzati per trovare la zona perfetta a Milano.</p>
                 </a>
             </div>
-            
-            <!-- Second Banner -->
-            <div class="banner-container">
-                <div class="banner-wrapper">
-                    <script type="text/javascript">
-                        atOptions = {
-                            'key' : '39b233784657ff269ecf8bc31aeedebe',
-                            'format' : 'iframe',
-                            'height' : 90,
-                            'width' : 728,
-                            'params' : {}
-                        };
-                    </script>
-                    <script type="text/javascript" src="//www.effectivegatecpm.com/tnedb6ypcs/invoke.js"></script>
+<script
+  type="text/javascript"
+  src="//www.highperformanceformat.com/7dfcfc9805c733f570652bd6c58aa8a8/invoke.js"
+></script>
+            <!-- Auto-Redirect Section -->
+            <div class="redirect-box">
+                <h3 class="redirect-title">🎁 Consiglio: inizia da qui</h3>
+                <p style="color: #4a5568; margin-bottom: 20px;">Per la ricerca più completa, ti consigliamo di iniziare da Immobiliare.it che ha il database più aggiornato.</p>
+                
+                <a href="https://www.immobiliare.it/affitto-case/milano/" 
+                   class="cta-button"
+                   target="_blank"
+                   onclick="return trackClick('Immobiliare.it - CTA', 'https://www.immobiliare.it/affitto-case/milano/', event)">
+                   Vai a Immobiliare.it Milano
+                </a>
+                
+                <div class="timer">
+                    <span class="timer-icon">🔄</span>
+                    <span>Reindirizzamento automatico tra</span>
+                    <span id="countdown">10</span>
+                    <span>secondi...</span>
                 </div>
             </div>
         </main>
         
         <!-- Footer -->
         <footer class="footer">
-            <!-- Third Banner -->
-            <div class="banner-container">
-                <div class="banner-wrapper">
-                    <script type="text/javascript">
-                        atOptions = {
-                            'key' : '39b233784657ff269ecf8bc31aeedebe',
-                            'format' : 'iframe',
-                            'height' : 90,
-                            'width' : 728,
-                            'params' : {}
-                        };
-                    </script>
-                    <script type="text/javascript" src="//www.effectivegatecpm.com/tnedb6ypcs/invoke.js"></script>
-                </div>
-            </div>
-            
             <p class="disclaimer">
                 <strong>Nota importante:</strong> Questo sito (affitimilano.it) non è un portale immobiliare. 
                 È un dominio registrato per aiutare gli utenti che digitano erroneamente indirizzi simili a siti di affitti. 
@@ -473,75 +575,162 @@ body {
             <p class="copyright">
                 © 2025 affitimilano.it | Domini simili: affittimilano.com
             </p>
+				<script type="text/javascript">
+  atOptions = {
+  	'key' : 'e48a76fea22d12815ef78cf1759d54aa',
+  	'format' : 'iframe',
+  	'height' : 90,
+  	'width' : 728,
+  	'params' : {}
+  };
+</script>
+<script
+  type="text/javascript"
+  src="//www.highperformanceformat.com/e48a76fea22d12815ef78cf1759d54aa/invoke.js"
+></script>
         </footer>
     </div>
 
     <!-- JavaScript -->
-    <script>
-        // Funzione per tracciare click
-        function trackClick(linkName, linkUrl, event) {
-            // Previeni comportamento predefinito
-            if (event) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
+<script>
+// Auto-redirect timer
+let countdown = 10;
+const countdownElement = document.getElementById('countdown');
+let redirectTimer;
+let userClicked = false;
+
+function startTimer() {
+    console.log('DEBUG: startTimer chiamato');
+    console.log('DEBUG: Elemento countdown trovato?', !!countdownElement);
+    
+    if (!countdownElement) {
+        console.error('Elemento countdown non trovato!');
+        return;
+    }
+    
+    console.log('Timer iniziato. Countdown:', countdown);
+    countdownElement.textContent = countdown;
+    
+    redirectTimer = setInterval(() => {
+        countdown--;
+        countdownElement.textContent = countdown;
+        
+        console.log('Countdown:', countdown);
+        
+        if (countdown <= 0) {
+            clearInterval(redirectTimer);
+            countdownElement.textContent = 'reindirizzamento...';
             
-            console.log('Click tracciato su:', linkName, 'URL:', linkUrl);
-            
-            // Traccia con GA4
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'link_click', {
-                    'event_category': 'outbound',
-                    'event_label': linkName,
-                    'event_value': 1,
-                    'link_url': linkUrl
+            // Traccia SOLO se non ha cliccato
+            if (!userClicked && typeof gtag !== 'undefined') {
+                console.log('Traccio auto_redirect');
+                gtag('event', 'auto_redirect', {
+                    'event_category': 'user_engagement',
+                    'event_label': 'redirect_after_10s'
                 });
             }
             
-            // Redirect dopo breve delay per permettere il tracciamento
             setTimeout(() => {
-                console.log('Eseguo redirect a:', linkUrl);
-                window.location.href = linkUrl;
-            }, 200);
-            
-            return false;
+                window.location.href = "https://www.immobiliare.it/affitto-case/milano/";
+            }, 500);
         }
+    }, 1000);
+}
 
-        // Inizializza tutto quando il DOM è pronto
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOMContentLoaded - Inizializzo tracciamento');
-            
-            // DEBUG: verifica che gtag sia disponibile
-            if (typeof gtag !== 'undefined') {
-                console.log('✅ gtag è disponibile');
-            } else {
-                console.warn('⚠️ gtag non disponibile al DOMContentLoaded');
-            }
-            
-            // Traccia pageview
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'page_view', {
-                    'page_title': document.title,
-                    'page_location': window.location.href,
-                    'page_referrer': document.referrer
-                });
-            }
+// Funzione per tracciare click
+function trackClick(linkName, linkUrl, event) {
+    console.log('DEBUG: trackClick chiamato per', linkName);
+    
+    // Previeni comportamento predefinito
+    if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    
+    userClicked = true;
+    console.log('Click tracciato su:', linkName, 'URL:', linkUrl);
+    
+    // Traccia con GA4
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'link_click', {
+            'event_category': 'outbound',
+            'event_label': linkName,
+            'event_value': 1,
+            'link_url': linkUrl
         });
+    } else {
+        console.warn('gtag non disponibile al momento del click');
+    }
+    
+    // Ferma il timer
+    if (redirectTimer) {
+        clearInterval(redirectTimer);
+        if (countdownElement) {
+            countdownElement.textContent = 'reindirizzamento...';
+        }
+    }
+    
+    // Redirect dopo breve delay
+    setTimeout(() => {
+        console.log('Eseguo redirect a:', linkUrl);
+        window.location.href = linkUrl;
+    }, 200);
+    
+    return false;
+}
 
-        // Debug: verifica che gtag sia caricato
-        let gtagCheckInterval = setInterval(() => {
-            if (typeof gtag !== 'undefined') {
-                console.log('✅ GA4 gtag è caricato correttamente');
-                clearInterval(gtagCheckInterval);
-            }
-        }, 100);
+// Inizializza tutto quando il DOM è pronto
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded - Inizializzo tracciamento');
+    
+    // DEBUG: verifica che gtag sia disponibile
+    if (typeof gtag !== 'undefined') {
+        console.log('✅ gtag è disponibile');
+    } else {
+        console.warn('⚠️ gtag non disponibile al DOMContentLoaded');
+    }
+    
+    // Traccia pageview
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'page_view', {
+            'page_title': document.title,
+            'page_location': window.location.href,
+            'page_referrer': document.referrer
+        });
+    }
+    
+    // Avvia il timer immediatamente
+    startTimer();
+});
 
-        // Dopo 5 secondi, se gtag non è caricato, avvisa
-        setTimeout(() => {
-            if (typeof gtag === 'undefined') {
-                console.warn('⚠️ GA4 gtag non è stato caricato dopo 5 secondi');
-            }
-        }, 5000);
-    </script>
+// Traccia uscita senza click
+window.addEventListener('beforeunload', function() {
+    if (!userClicked && countdown > 0 && typeof gtag !== 'undefined') {
+        console.log('Traccio exit_without_click, countdown:', countdown);
+        
+        gtag('event', 'exit_without_click', {
+            'event_category': 'user_behavior',
+            'event_label': 'bounced_before_redirect',
+            'value': countdown,
+            'transport_type': 'beacon'
+        });
+    }
+});
+
+// Debug: verifica che gtag sia caricato
+let gtagCheckInterval = setInterval(() => {
+    if (typeof gtag !== 'undefined') {
+        console.log('✅ GA4 gtag è caricato correttamente');
+        clearInterval(gtagCheckInterval);
+    }
+}, 100);
+
+// Dopo 5 secondi, se gtag non è caricato, avvisa
+setTimeout(() => {
+    if (typeof gtag === 'undefined') {
+        console.warn('⚠️ GA4 gtag non è stato caricato dopo 5 secondi');
+    }
+}, 5000);
+</script>
 </body>
 </html>
